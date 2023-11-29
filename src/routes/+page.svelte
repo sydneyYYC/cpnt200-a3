@@ -1,5 +1,7 @@
 <script>
   export let data;
+  import dayjs from 'dayjs';
+  let date1 = dayjs(data.a3_blog.date).format('MMMM DD, YYYY')
 </script>
 
 
@@ -17,7 +19,7 @@
       </div>
     <p>{@html post.markdown_content}</p>
 
-  <p>{post.date}</p>
+  <p>Published on {date1}</p>
   {/each}
 </main>
 
